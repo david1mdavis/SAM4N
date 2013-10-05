@@ -1,0 +1,28 @@
+import rtconfig
+Import('RTT_ROOT')
+from building import *
+
+# get current directory
+cwd = GetCurrentDir()
+
+# The set of source files associated with this SConscript file.
+src = Split("""
+source/system_SAM4N.c
+""")
+
+
+# add for startup script 
+if rtconfig.CROSS_TOOL == 'gcc':
+    src = src + ['source/' + 'startup_SAM4N.s']
+elif rtconfig.CROSS_TOOL == 'keil':
+    src = src + ['source/' + 'startup_SAM4N.s']
+
+path = [cwd + 'include']
+
+if GetDepend(['RT_USING_RTT_CMSIS']):
+    path += [RTT_ROOT + '/components/CMSIS/Include']
+
+CPPDEFINES = [rtconfig.SAM4N_TYPE]
+group = DefineGroup('SAM4N_Startup', src, depend = [''], CPPPATH = path, CPPDEFINES = CPPDEFINES)
+
+Return('group')
