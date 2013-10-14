@@ -349,7 +349,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>__SAM4N16C__</Define>
               <Undefine></Undefine>
               <IncludePath>.\Applications;.\CMSIS\include;.\Drivers</IncludePath>
             </VariousControls>
