@@ -17,7 +17,7 @@ if rtconfig.CROSS_TOOL == 'gcc':
 elif rtconfig.CROSS_TOOL == 'keil':
     src = src + ['source/' + 'startup_SAM4N.s']
 
-path = [cwd + 'include']
+path = [cwd + '/include']
 
 if GetDepend(['RT_USING_RTT_CMSIS']):
     path += [RTT_ROOT + '/components/CMSIS/Include']

@@ -9,15 +9,15 @@ src = Split("""
 board.c
 drv_led.c
 drv_usart.c
+drv_uart.c
 """)
 
-# add Ethernet drvers.
-if GetDepend('RT_USING_LWIP'):
-    src += ['dm9000a.c']
-
+# add SPI drvers.
+if GetDepend('RT_USING_SPI'):
+    src += ['drv_spi.c']
 # add Ethernet drvers.
 if GetDepend('RT_USING_DFS'):
-    src += ['sdcard.c']
+    src += ['msd.c']
 
 # add Ethernet drvers.
 if GetDepend('RT_USING_RTC'):
