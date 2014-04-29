@@ -77,7 +77,14 @@ void rt_init_thread_entry(void* parameter)
     /* initialization RT-Thread Components */
     rt_components_init();
 #endif
-
+#ifdef RT_USING_SPI
+	{
+	extern void rt_hw_spi_init(void);
+	extern rt_err_t msd_init(const char * sd_device_name, const char * spi_device_name);
+	rt_hw_spi_init();
+  msd_init("sd0","spi01");
+	}
+#endif
 #ifdef  RT_USING_FINSH
     finsh_set_device(RT_CONSOLE_DEVICE_NAME);
 #endif  /* RT_USING_FINSH */
