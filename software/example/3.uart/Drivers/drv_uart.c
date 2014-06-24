@@ -26,7 +26,7 @@ void UART0_Init(uint32_t baudrate)
   uint32_t Fdiv =0;
 	/*禁止外设管理控制寄存器(PMC)写保护*/
   PMC->PMC_WPMR = 0x504D4300; 
-  /*使能UART1和PIOA时钟*/	
+  /*使能UART0和PIOA时钟*/	
   PMC->PMC_PCER0 = ((1UL << ID_PIOA) |   
                     (1UL << ID_UART0) );  
 	/*使能外设管理控制寄存器(PMC)写保护*/
