@@ -66,13 +66,14 @@
 #define RT_USING_DEVICE_IPC
 // <bool name="RT_USING_SERIAL" description="Using Serial" default="true" />
 #define RT_USING_SERIAL
-
+// <bool name="RT_USING_SPI" description="Using SPI Device" default="true" />
+#define RT_USING_SPI
 /* SECTION: Console options */
 #define RT_USING_CONSOLE
 /* the buffer size of console*/
 #define RT_CONSOLEBUF_SIZE	        128
 // <string name="RT_CONSOLE_DEVICE_NAME" description="The device name for console" default="uart1" />
-#define RT_CONSOLE_DEVICE_NAME	    "usart0"
+#define RT_CONSOLE_DEVICE_NAME	    "uart0"
 
 /* SECTION: finsh, a C-Express shell */
 #define RT_USING_FINSH
@@ -81,7 +82,7 @@
 #define FINSH_USING_DESCRIPTION
 
 /* SECTION: device filesystem */
-/* #define RT_USING_DFS */
+#define RT_USING_DFS 
 
 #define RT_USING_DFS_ELMFAT
 /* Reentrancy (thread safe) of the FatFs module.  */
@@ -151,30 +152,6 @@
 /* TCP receive window. */
 #define RT_LWIP_TCP_WND		8192
 
-/* SECTION: RT-Thread/GUI */
-/* #define RT_USING_RTGUI */
-
-/* name length of RTGUI object */
-#define RTGUI_NAME_MAX		12
-/* support 16 weight font */
-#define RTGUI_USING_FONT16
-/* support Chinese font */
-#define RTGUI_USING_FONTHZ
-/* use DFS as file interface */
-#define RTGUI_USING_DFS_FILERW
-/* use font file as Chinese font */
-#define RTGUI_USING_HZ_FILE
-/* use Chinese bitmap font */
-#define RTGUI_USING_HZ_BMP
-/* use small size in RTGUI */
-#define RTGUI_USING_SMALL_SIZE
-/* use mouse cursor */
-/* #define RTGUI_USING_MOUSE_CURSOR */
-/* default font size in RTGUI */
-#define RTGUI_DEFAULT_FONT_SIZE	16
-
-/* image support */
-/* #define RTGUI_IMAGE_XPM */
 /* #define RTGUI_IMAGE_BMP */
 
 // <bool name="RT_USING_CMSIS_OS" description="Using CMSIS OS API" default="true" />

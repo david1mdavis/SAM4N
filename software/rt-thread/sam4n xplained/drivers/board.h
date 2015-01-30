@@ -38,10 +38,13 @@
 #define SAM4N_SRAM_END          (0x20000000 + SAM4N_SRAM_SIZE * 1024)
 
 /* USART driver select. */
-#define RT_USING_USART0
-#define RT_USING_USART1
-#define RT_USING_USART2
-
+//#define RT_USING_USART0
+//#define RT_USING_USART1
+//#define RT_USING_USART2
+/* UART driver select. */
+#define RT_USING_UART0
+//#define RT_USING_UART1
+//#define RT_USING_UART2
 #endif /* __BOARD_H__ */
 
 // <<< Use Configuration Wizard in Context Menu >>>

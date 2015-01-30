@@ -14,5 +14,5 @@
 #include "stdio.h"
 #include "board.h"
 
-void rt_hw_serial_init(void);
+void rt_hw_usart_init(void);
 #endif

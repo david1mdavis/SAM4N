@@ -219,7 +219,7 @@ static const struct rt_uart_ops sam4_usart_ops =
     sam4_usart_putc,
     sam4_usart_getc,
 };
-void rt_hw_serial_init(void)
+void rt_hw_usart_init(void)
 {
     struct sam4_usart *usart;
 
